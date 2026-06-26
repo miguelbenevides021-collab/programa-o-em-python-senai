@@ -1,15 +1,26 @@
-escolha = ['','miguel', 'matheus', 'idiota']
+print('Sistema de compras!')
 
-print('miguel')
-print('matheus')
-print('idiota')
-opusuario = int(input('escolha um da lista '))
+compras = ['','coca-cola','shanduiche', 'bacon', 'marmita']
 
-res = escolha[opusuario]
+print('coca-cola')
+print('shanduiche')
+print('bacon')
+print('marmita')
 
-if res == 'miguel' :
-    print('otima escolha')
-elif res == 'matheus':
-    print('escolha ok')
-else:
-    print('da para passar!')
+def opcompras():
+    for i in range(3):
+        try:
+            escolha = int(input('qual voce escolhe?: '))
+
+            escolhausuario = compras[escolha]
+
+            print(f'sua escolha foi: {escolhausuario}')
+        except ValueError:
+            con = input('error 400: Aconteceu um erro, deseja continuar?').lower()
+            if con == 'sim':
+                opcompras()
+            else:
+                input('enter para sair')
+                break
+opcompras()
+          

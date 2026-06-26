@@ -1,8 +1,19 @@
-verificar = input('digite seu quarto')
+listaDeccompras = ['','hamburguer', 'sorvete', 'fornalha']
 
-match verificar:
-    case '':
-        print('voce precisa colocar algo')
-    case _:
-        print('Ok, pode passar')
+print('hamburguer')
+print('sorvete')
+print('fornalha')
+
+
+
+try:
+    
+    esolha = int(input('escolha suas compras: '))
+    if esolha <= 3 and esolha >0:
+        res = listaDeccompras[esolha]
+        print(f'voce escolheu {res}')
+    else:
+        print('Erro: Esse número de produto não existe na lista!')
+except:
+        print('Erro: Você não digitou um número válido!')
 
