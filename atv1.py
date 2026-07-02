@@ -1,26 +1,9 @@
-print('Sistema de compras!')
+import modulo
 
-compras = ['','coca-cola','shanduiche', 'bacon', 'marmita']
-
-print('coca-cola')
-print('shanduiche')
-print('bacon')
-print('marmita')
-
-def opcompras():
-    for i in range(3):
-        try:
-            escolha = int(input('qual voce escolhe?: '))
-
-            escolhausuario = compras[escolha]
-
-            print(f'sua escolha foi: {escolhausuario}')
-        except ValueError:
-            con = input('error 400: Aconteceu um erro, deseja continuar?').lower()
-            if con == 'sim':
-                opcompras()
-            else:
-                input('enter para sair')
-                break
-opcompras()
-          
+print(f'numero aleatorio: {modulo.numeros2()}')
+print(f'Numeros aleatorios: {modulo.numeros3()}')
+print(f'Numero de 10 a 30 é: {modulo.numero4()}')
+print(f'Contagem regresiva {modulo.contagem()}')
+print(f'A conta deu: {modulo.pares()}')
+print(f'A tabuada é: {modulo.multi()}')
+print(f'Contagem {modulo.contagem99()}')
